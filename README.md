@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation (via Docker)
 
-Things you may want to cover:
+The app follow the conventions of standard Rails 5 API application.
 
-* Ruby version
+Env:
 
-* System dependencies
+```bash
+cp .env.example .env
+```
 
-* Configuration
+Build:
 
-* Database creation
+```bash
+docker-compose build --pull
+```
 
-* Database initialization
+Running the containers:
 
-* How to run the test suite
+```bash
+docker-compose up -d
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Running tests:
 
-* Deployment instructions
-
-* ...
+```bash
+docker-compose run --rm web rspec ./spec
+```
